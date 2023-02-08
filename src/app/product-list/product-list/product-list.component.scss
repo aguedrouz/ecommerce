@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
+
+  .filter-form {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 20px;
+  }
+
+  .product__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .product__list-item {
+      flex-basis: 33.33%;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  :host {
+    .product__list {
+      .product__list-item {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

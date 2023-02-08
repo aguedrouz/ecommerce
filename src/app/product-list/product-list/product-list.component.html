@@ -1,0 +1,20 @@
+<form [formGroup]="filterFormGroup" class="filter-form">
+  <label for="category-select">Catégorie : </label>
+  <select
+    id="category-select"
+    formControlName="category"
+    (change)="onSelectCategory()"
+    class="filter-form__category-select"
+  >
+    <option [ngValue]="null"></option>
+    <option *ngFor="let category of categories" [ngValue]="category">{{ category }}</option>
+  </select>
+</form>
+<div class="product__list">
+  <app-product-card
+    *ngFor="let product of products"
+    [product]="product"
+    (cartItemEventEmitter)="addToCart($event)"
+    class="product__list-item"
+  ></app-product-card>
+</div>
