@@ -1,0 +1,17 @@
+@import '../../../../../../common.scss';
+
+:host {
+  display: flex;
+  width: 100%;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $color-alto;
+    border-radius: 5px;
+    background-color: $color-alabaster;
+  }
+}

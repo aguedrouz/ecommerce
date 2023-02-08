@@ -1,0 +1,65 @@
+@import '../../../../common.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
+
+  .products__link {
+    margin-bottom: 20px;
+  }
+
+  .cart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .item {
+        display: flex;
+        gap: 10px;
+        border: 1px solid;
+        padding: 10px;
+        background-color: $color-alabaster;
+
+        &__detail {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          flex-basis: 100%;
+          background-color: $color-alabaster;
+        }
+
+        &__delete-button {
+          align-self: center;
+        }
+      }
+    }
+
+    &__total-price {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      gap: 4px;
+    }
+
+    &--empty {
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  :host {
+    .cart {
+      &__total-price {
+        align-self: center;
+      }
+    }
+  }
+}

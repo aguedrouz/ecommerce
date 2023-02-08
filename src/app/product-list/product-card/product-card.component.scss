@@ -1,0 +1,46 @@
+@import '../../../../common.scss';
+
+:host {
+  display: flex;
+
+  .product-card {
+    max-width: 250px;
+    display: flex;
+
+    &__title {
+      text-align: center;
+      margin: 0;
+    }
+
+    &__detail {
+      text-align: center;
+    }
+
+    .add-to-card__form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      .quantity__input {
+        width: 80px;
+      }
+
+      .product-unavailable {
+        color: $color-Copper-rust;
+      }
+
+      .button {
+        width: 87px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  :host {
+    .product-card {
+      max-width: 100%;
+    }
+  }
+}
